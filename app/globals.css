@@ -1,4 +1,4 @@
-/* app/globals.css */
+/* File Location: app/globals.css */
 
 :root {
   --primary-blue: #0d6efd;
@@ -27,4 +27,41 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+/* --- NEW PRINT STYLES --- */
+/* These styles will only apply when the user tries to print the page */
+@media print {
+  body {
+    background-color: #fff !important; /* Ensure a white background for printing */
+  }
+
+  /* This is a common pattern to hide everything except the printable area */
+  body * {
+    visibility: hidden;
+  }
+
+  /* You need to define which part of your page is the printable area.
+    In our case, it's the .invoiceWrapper from the preview page.
+    We use a more generic class name here to avoid module scoping issues.
+  */
+  .printable-area, .printable-area * {
+    visibility: visible;
+  }
+
+  .printable-area {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    box-shadow: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  /* Hide the action buttons when printing */
+  .no-print {
+    display: none !important;
+  }
 }

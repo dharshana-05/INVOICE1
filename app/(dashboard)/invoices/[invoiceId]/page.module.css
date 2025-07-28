@@ -167,17 +167,7 @@
     padding: 4rem;
 }
 
-/* Print Styles */
-@media print {
-  body {
-    background-color: #fff;
-  }
-  .actionsBar {
-    display: none;
-  }
-  .invoiceWrapper {
-    box-shadow: none;
-    margin: 0;
-    max-width: 100%;
-  }
-}
+/*
+  THE GLOBAL PRINT STYLES HAVE BEEN REMOVED FROM THIS FILE.
+  THEY WILL BE ADDED TO globals.css IN THE NEXT STEP.
+*/
