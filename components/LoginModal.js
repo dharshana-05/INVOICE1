@@ -3,21 +3,19 @@
 "use client";
 
 import { useState } from 'react';
-import { useRouter } from 'next/navigation'; // 1. Import the router
+import { useRouter } from 'next/navigation';
 import styles from './LoginModal.module.css';
 import Button from './Button';
 
 export default function LoginModal({ onClose }) {
   const [mode, setMode] = useState('login'); 
-  const router = useRouter(); // 2. Initialize the router
+  const router = useRouter();
 
   const handleSubmit = (e) => {
     e.preventDefault();
     if (mode === 'login') {
-      // 3. On successful login, redirect to the invoices page
       router.push('/invoices');
     } else {
-      // On successful signup, show a message and switch to login mode
       alert('Sign up successful! Please log in to continue.');
       setMode('login');
     }
@@ -41,7 +39,6 @@ export default function LoginModal({ onClose }) {
             <input type="password" id="password" required />
           </div>
 
-          {/* Only show "Confirm Password" in sign up mode */}
           {mode === 'signup' && (
             <div className={styles.inputGroup}>
               <label htmlFor="confirmPassword">Confirm Password</label>
@@ -54,11 +51,11 @@ export default function LoginModal({ onClose }) {
           </Button>
         </form>
 
-        {/* Toggle between Login and Sign Up views */}
         <div className={styles.toggleMode}>
           {mode === 'login' ? (
             <p>
-              Don't have an account?{' '}
+              {/* THE FIX IS HERE: Replaced ' with &apos; */}
+              Don&apos;t have an account?{' '}
               <button onClick={() => setMode('signup')}>Sign Up</button>
             </p>
           ) : (
