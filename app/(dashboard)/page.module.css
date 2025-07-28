@@ -1,0 +1,11 @@
+/* app/(dashboard)/layout.module.css */
+.dashboardContainer {
+  display: flex;
+  min-height: 100vh;
+}
+
+.mainContent {
+  flex-grow: 1;
+  padding: 2rem;
+  background-color: #f9fafb;
+}

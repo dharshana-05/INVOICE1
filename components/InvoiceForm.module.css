@@ -1,0 +1,174 @@
+/* File Location: components/InvoiceForm.module.css */
+
+.formWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+/* --- General Input Styles --- */
+.formWrapper input, .formWrapper textarea, .formWrapper select {
+  width: 100%;
+  padding: 0.85rem;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.formWrapper input:focus, .formWrapper textarea:focus {
+  outline: none;
+  border-color: var(--primary-blue);
+  box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.15);
+}
+
+.formWrapper textarea {
+  min-height: 80px;
+  resize: vertical;
+}
+
+.boxTitle {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: #374151;
+}
+
+/* --- Top Section: From/To --- */
+.topSection {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+}
+
+.addressBox {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+/* --- Middle Section: Invoice Details --- */
+.detailsSection {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  border-top: 1px solid #e5e7eb;
+  padding-top: 2rem;
+}
+
+.detailsSection div {
+  display: flex;
+  flex-direction: column;
+}
+
+.detailsSection label {
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: #6b7280;
+}
+
+/* --- Items Section --- */
+.itemsSection {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  border-top: 1px solid #e5e7eb;
+  padding-top: 2rem;
+}
+
+.itemRow {
+  display: grid;
+  grid-template-columns: 4fr 1fr 1fr 1fr 30px;
+  gap: 1rem;
+  align-items: center;
+}
+
+.itemsHeader {
+  display: grid; /* Ensure header uses grid */
+  grid-template-columns: 4fr 1fr 1fr 1fr 30px; /* Match the item rows */
+  gap: 1rem; /* Match the item rows */
+  color: #6b7280;
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.itemsHeader span:last-child {
+  text-align: right;
+  padding-right: 0.5rem; /* Align with amount */
+}
+
+.amount {
+  text-align: right;
+  font-weight: 500;
+  padding-right: 0.5rem;
+}
+
+.deleteItemButton {
+  background: #fee2e2;
+  color: #ef4444;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s;
+}
+.deleteItemButton:hover {
+  background-color: #fecaca;
+}
+
+/* --- Bottom Section --- */
+.bottomSection {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2.5rem;
+  border-top: 1px solid #e5e7eb;
+  padding-top: 2rem;
+  margin-top: 1rem;
+}
+
+.notesAndPayment {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.summary {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.totals {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.totals div {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  font-size: 1rem;
+}
+
+.totals strong {
+  font-size: 1.25rem;
+  color: #111827;
+}
+
+.actions {
+  display: flex;
+}
+
+.actions > button {
+  width: 100%; /* Make button full width */
+}

@@ -1,0 +1,67 @@
+/* File Location: components/Header.module.css */
+
+.header {
+  width: 100%;
+  padding: 1rem 2rem;
+  /* The background is set on the page wrapper, so this can be transparent */
+  background-color: transparent; 
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  padding: 0.75rem 2rem;
+  border-radius: 50px; /* This creates the pill shape */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: var(--primary-blue);
+}
+
+.nav {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav a {
+  font-weight: 500;
+  color: #333;
+  transition: color 0.2s;
+}
+
+.nav a:hover {
+  color: var(--primary-blue);
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+/* These styles make the <button> look like a plain text link */
+.loginLink {
+  font-weight: bold;
+  color: #333;
+  transition: color 0.2s;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 0;
+  font-family: inherit; /* Use the same font as the rest of the page */
+}
+
+.loginLink:hover {
+  color: var(--primary-blue);
+}

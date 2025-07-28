@@ -1,0 +1,12 @@
+/* File Location: app/(dashboard)/layout.module.css */
+
+.dashboardContainer {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f8f9fa; /* Match the homepage background for consistency */
+}
+
+.mainContent {
+  flex-grow: 1; /* Allows this area to fill the remaining space */
+  padding: 2rem;
+}

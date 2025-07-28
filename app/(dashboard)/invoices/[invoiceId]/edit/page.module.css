@@ -1,0 +1,25 @@
+/* File Location: app/(dashboard)/invoices/[invoiceId]/edit/page.module.css */
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2.5rem; /* A bit more padding */
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.07);
+  border: 1px solid #e5e7eb;
+}
+
+.container h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: #111827;
+}
+
+/* Styles for the "Invoice Not Found" error state */
+.container p {
+  margin-bottom: 1.5rem;
+  color: #4b5563;
+  line-height: 1.6;
+}
