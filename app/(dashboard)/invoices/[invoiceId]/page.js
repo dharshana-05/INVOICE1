@@ -147,7 +147,7 @@ export default function InvoicePreviewPage() {
               <p><strong>No:</strong> {invoice.bankAccount || 'N/A'}</p>
             </div>
             <div className={styles.thankYou}>
-              <h2>Thank You!</h2>
+              <h2></h2>
             </div>
           </section>
         </main>

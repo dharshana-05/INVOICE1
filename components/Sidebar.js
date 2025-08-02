@@ -24,7 +24,7 @@ export default function Sidebar() {
 
   return (
     <aside className={styles.sidebar}>
-      <div className={styles.logo}>Bookipi</div>
+      <div className={styles.logo}>BillEase</div>
       <nav className={styles.nav}>
         {navItems.map((item) => {
           // Only determine if the link is active if we are on the client
