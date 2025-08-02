@@ -30,7 +30,7 @@ export default function HomePage() {
           </div>
           <div className={styles.heroImage}>
             <Image
-              src="/images/mountain-biker.jpg"
+              src="/images/homepage.jpg"
               alt="Person riding a bike on a mountain trail"
               width={500}
               height={350}
