@@ -10,7 +10,7 @@ export default function Header({ onLoginClick }) {
     <header className={styles.header}>
       <div className={styles.container}>
         <Link href="/" className={styles.logo}>
-          Bookipi
+          BillEase 
         </Link>
         <nav className={styles.nav}>
           <Link href="#">Invoice app</Link>
